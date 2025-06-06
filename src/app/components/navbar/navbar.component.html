@@ -1,0 +1,11 @@
+<header>
+    <div class="logo" routerLink="/">
+        <mat-icon class="icon">stars</mat-icon>
+        <span>Gestión de productos</span>
+    </div>
+    <nav>
+        @for (item of buttonList(); track $index) {
+        <button mat-button [routerLink]="item.route">{{item.name}}</button>
+        }
+    </nav>
+</header>

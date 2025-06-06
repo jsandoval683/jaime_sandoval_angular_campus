@@ -1,0 +1,12 @@
+@let productInfo = product();
+<div class="container">
+    <div class="ima-container">
+        <img [src]="productInfo?.imageUrl" alt="{{ productInfo?.name }}" class="img-fluid">
+    </div>
+    <div class="info-container">
+        <h2>{{ productInfo?.name }}</h2>
+        <p>{{ productInfo?.description }}</p>
+        <h3>Price: {{ productInfo?.price | currency }}</h3>
+    </div>
+    <button mat-fab extended routerLink="/products">Más productos</button>
+</div>
